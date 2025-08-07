@@ -1,9 +1,9 @@
 specVersion: v0.1.0
 package:
   name: farcaster_stats
-  version: v1.0.0
+  version: v1.0.2
   description: "A Substreams module that tracks Farcaster protocol events on Optimism, including user registrations, storage rentals, and key changes."
-  url: "https://github.com/your-username/farcaster-stats-substream"
+  url: "https://github.com/PaulieB14/Farcaster-Substreams"
   image: logo.jpeg
 
 network: optimism

@@ -1,0 +1,2 @@
+cargo:rerun-if-changed=farcaster_stats.proto
+cargo:rerun-if-changed=.
