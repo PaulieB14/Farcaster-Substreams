@@ -1,0 +1,18 @@
+specVersion: v0.1.0
+package:
+  name: farcaster_stats
+  version: v1.0.0
+
+binaries:
+  default:
+    type: wasm/rust-v1
+    file: target/wasm32-unknown-unknown/release/farcaster_stats.wasm
+
+modules:
+  - name: map_farcaster_events
+    kind: map
+    inputs:
+      - source: sf.ethereum.type.v2.Block
+    output:
+      type: proto:google.protobuf.Any
+    binary: default 

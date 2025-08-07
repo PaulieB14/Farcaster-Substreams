@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package farcaster_stats.v1;
+
+message FarcasterEvents {
+  repeated UserRegistration user_registrations = 1;
+  repeated StorageEvent storage_events = 2;
+  repeated KeyChange key_changes = 3;
+  uint64 total_events = 4;
+}
+
+message UserRegistration {
+  string farcaster_id = 1;
+  string ethereum_address = 2;
+  uint64 block_number = 3;
+  string transaction_hash = 4;
+}
+
+message StorageEvent {
+  string farcaster_id = 1;
+  uint32 storage_units = 2;
+  string event_type = 3;
+  uint64 block_number = 4;
+  string transaction_hash = 5;
+}
+
+message KeyChange {
+  string farcaster_id = 1;
+  string key_type = 2;
+  uint64 block_number = 3;
+  string transaction_hash = 4;
+} 

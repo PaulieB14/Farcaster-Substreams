@@ -1,0 +1,29 @@
+specVersion: v0.1.0
+package:
+  name: farcaster_stats
+  version: v1.0.0
+  description: "A Substreams module that tracks Farcaster protocol events on Optimism, including user registrations, storage rentals, and key changes."
+  url: "https://github.com/your-username/farcaster-stats-substream"
+  image: logo.jpeg
+
+network: optimism
+
+protobuf:
+  files:
+    - farcaster_stats.proto
+  importPaths:
+    - ./proto
+
+binaries:
+  default:
+    type: wasm/rust-v1
+    file: target/wasm32-unknown-unknown/release/farcaster_stats.wasm
+
+modules:
+  - name: map_farcaster_events
+    kind: map
+    inputs:
+      - source: sf.ethereum.type.v2.Block
+    output:
+      type: proto:farcaster_stats.v1.FarcasterEvents
+    binary: default 

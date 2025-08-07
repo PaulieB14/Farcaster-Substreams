@@ -1,0 +1,28 @@
+{
+  "name": "farcaster-stats",
+  "version": "1.0.0",
+  "description": "Farcaster Statistics Substream - Track valuable metrics from Farcaster's core contracts on Optimism",
+  "main": "substream.yaml",
+  "scripts": {
+    "build": "cargo build --target wasm32-unknown-unknown --release",
+    "publish": "substreams publish farcaster_stats"
+  },
+  "keywords": [
+    "farcaster",
+    "optimism",
+    "substreams",
+    "blockchain",
+    "analytics",
+    "social-media"
+  ],
+  "author": "Farcaster Analytics",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/farcaster-substream"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/farcaster-substream/issues"
+  },
+  "homepage": "https://substreams.dev/packages/farcaster-stats"
+} 
